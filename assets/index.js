@@ -1,12 +1,14 @@
-let plannerEl = $('#planner')
+
 
 $(document).ready(function () {
 
-    //Displays current day
-    var todayIs = moment().format("dddd, MMMM Do");
-    $("#itIsTime").text(todayIs);
+    let plannerEl = $('#planner')
 
-    // $("#currentDay").text(moment().format("dddd, MMMM Do"));
+    //Displays current day
+    var itIsTime = moment().format("dddd, MMMM Do YYYY");
+    $("#itIsTime").text(itIsTime);
+
+
 
     //Array for time periods to schedule
     var timeSlots = [
