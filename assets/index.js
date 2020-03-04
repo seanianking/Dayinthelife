@@ -33,10 +33,10 @@ $(document).ready(function () {
         </div></div>`);
     };
 
-
+    //Button function to save user's input to localStorage
     $('.btn').click(function (){
-        var input = $(this).parent().get("textarea").val();
-        var hour = $(this).parent().get("textarea").prop("id");
+        var input = $(this).parent().find("textarea").val();
+        var hour = $(this).parent().find("textarea").prop("id");
         localStorage.setItem(hour, input);
     })
 })
