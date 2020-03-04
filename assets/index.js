@@ -29,8 +29,14 @@ $(document).ready(function () {
         plannerEl.append(`<div class="row">
         <div class="col-sm-1 hour">${timeSlots[i].time}</div>
         <textarea class="col-sm-10 input" id="${i}" data-value="${timeSlots[i].value}">${savedText}</textarea>
-        <div class="col-sm-1 justify-content-center btn"><i class ="far fa-save fa-2x"></i></div>
+        <div class="col-sm-1 justify-content-center btn"><i class ="fas fa-share fa-2x"></i></div>
         </div></div>`);
     };
 
+
+    $('.btn').click(function (){
+        var input = $(this).parent().get("textarea").val();
+        var hour = $(this).parent().get("textarea").prop("id");
+        localStorage.setItem(hour, input);
+    })
 })
