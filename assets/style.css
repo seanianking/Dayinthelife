@@ -1,0 +1,31 @@
+body {
+    background: #fffc7f;
+}
+#header {
+    text-align: center;
+}
+.hour {
+    background-color: #1789fc;
+}
+.btn {
+    background-color: #8db1ab;
+}
+.past {
+    background-color:#fdb833;
+}
+.present {
+    background-color: lightgreen;
+}
+.future {
+    background-color: #84714f;
+}
+.row {
+    padding: 5px;
+}
+.col-sm-9 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+h1, h2 {
+    
+}

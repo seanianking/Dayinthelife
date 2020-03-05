@@ -26,9 +26,9 @@ $(document).ready(function () {
     //for loop to generate div columns
     for (var i = 0; i < timeSlots.length; i++) {
         savedText = localStorage.getItem(i) || ""
-        plannerEl.append(`<div class="row">
-        <div class="col-sm-1 hour">${timeSlots[i].time}</div>
-        <textarea class="col-sm-10 input" id="${i}" data-value="${timeSlots[i].value}">${savedText}</textarea>
+        plannerEl.append(`<div class="row no-gutters">
+        <div class="col-sm-1 rounded hour">${timeSlots[i].time}</div>
+        <textarea class="col-sm-9 rounded input" id="${i}" data-value="${timeSlots[i].value}">${savedText}</textarea>
         <div class="col-sm-1 justify-content-center btn"><i class ="fas fa-share fa-2x"></i></div>
         </div></div>`);
     };
