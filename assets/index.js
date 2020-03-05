@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     let plannerEl = $('#planner')
 
-    //Displays current day
+    //Displays current day and local time
     var itIsTime = moment().format("dddd, MMMM Do YYYY, h:mm a");
     $("#itIsTime").text(itIsTime);
 
