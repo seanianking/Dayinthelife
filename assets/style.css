@@ -27,5 +27,12 @@ body {
     margin-right: 5px;
 }
 h1, h2 {
-    
+    font-family: 'Lobster', cursive;
+}
+textarea {
+    font-family: 'Philosopher', sans-serif;
+    font-size: large;
+}
+#planner {
+    padding-bottom: 50px;
 }

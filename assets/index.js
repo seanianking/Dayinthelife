@@ -34,9 +34,34 @@ $(document).ready(function () {
     };
 
     //Button function to save user's input to localStorage
-    $('.btn').click(function (){
-        var input = $(this).parent().find("textarea").val();
-        var hour = $(this).parent().find("textarea").prop("id");
-        localStorage.setItem(hour, input);
-    })
+    $('.btn').click(function () {
+        var inputText = $(this).parent().find("textarea").val();
+        var hour = $(this).parent().find("textarea").attr("id");
+        localStorage.setItem(hour, inputText);
+    });
+
+    // if/else if/else statement for textarea background color
+    function styleTime() {
+        //uses moment.js to find the current hour
+        rightNow = parseInt(moment().format("H"));
+        //creates input variable as an object
+        var input = $(".input");
+        //targets the input object just created
+        var currentHour = $(input[i]);
+        //start of for loop to determine the current time and sorts 
+        //which class to be added to each textarea
+        for (var i = 0; i<input.length; i++) {
+            if (currentHour.attr('data-value') > rightNow) {
+                currentHour.addClass('future')
+            } else if (currentHour.attr('data-value') < rightNow) {
+                currentHour.addClass('past')
+            } else (currentHour.addClass('present'))
+        }
+        console.log (input);
+        console.log ($(timeSlots[i]));
+        console.log (input.attr('data-value'));
+        console.log (rightNow);
+    };
+    
+    styleTime();
 })
