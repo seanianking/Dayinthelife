@@ -5,11 +5,11 @@ $(document).ready(function () {
     let plannerEl = $('#planner')
 
     //Displays current day and local time
-    var itIsTime = moment().format("dddd, MMMM Do YYYY, h:mm a");
-    $("#itIsTime").text(itIsTime);
+    var isItTime = moment().format("dddd, MMMM Do YYYY, h:mm a");
+    $("#itIsTime").text(isItTime);
 
 
-
+    //Here is a section that doesn't matter except for showing a change.
     //Array for time periods to schedule
     var timeSlots = [
         { time: "9 AM", value: '9' },
@@ -50,7 +50,7 @@ $(document).ready(function () {
 
         //start of for loop to determine the current time and sorts 
         //which class to be added to each textarea
-        for (var i = 0; i<timeClass.length; i++) {
+        for (var i = 0; i < timeClass.length; i++) {
             //targets the input object just created
             var currentHour = $(timeClass[i]);
             if (currentHour.attr('data-value') > rightNow) {
@@ -59,11 +59,11 @@ $(document).ready(function () {
                 currentHour.addClass('past')
             } else (currentHour.addClass('present'))
         }
-        console.log (timeClass);
-        console.log ($(timeSlots[i]));
-        console.log (timeClass.attr('data-value'));
-        console.log (rightNow);
+        console.log(timeClass);
+        console.log($(timeSlots[i]));
+        console.log(timeClass.attr('data-value'));
+        console.log(rightNow);
     };
-    
+
     styleTime();
 })
